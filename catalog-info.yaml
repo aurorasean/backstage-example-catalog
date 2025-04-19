@@ -13,7 +13,7 @@ spec:
   system: canvas
   providesApis: [example-grpc-api]
   dependsOn:
-    - example-db
+    - resource:example-db
 
 ---
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-api
