@@ -2,6 +2,9 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: example-bff
+  annotations: 
+    assetid: example-bff
+    github-squad: icis-mars
 spec:
   type: service
   owner: user:guest
