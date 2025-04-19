@@ -2,6 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: example-bff
+  description: example bff
   annotations: 
     assetid: example-bff
     github-squad: icis-mars
@@ -9,14 +10,34 @@ spec:
   type: service
   owner: user:guest
   lifecycle: experimental
+  system: canvas
+  providesApis: [example-grpc-api]
+
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-api
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: example-bff-api
+  description: example bff api
+spec:
+  type: bff-api
+  lifecycle: experimental
+  owner: user:guest
+  system: canvas
   definition: |
-    syntax = "proto3";
+    syntax = "python";
+    import grpc
+    import example_pb2_grpc 
+    print("Hello world")
 
-    service Exampler {
-      rpc Example (ExampleMessage) returns (ExampleMessage) {};
-    }
-
-    message ExampleMessage {
-      string example = 1;
-    };
-
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: example-db
+  description: example bff db
+spec:
+  type: mongo-database
+  owner: user:guest
+  system: canvas
