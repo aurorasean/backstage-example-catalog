@@ -43,3 +43,13 @@ spec:
   type: mongo-database
   owner: user:guest
   system: canvas
+---
+apiVersion: backstage.io/v1alpha1
+kind: Deployment
+metadata:
+  name: example-bff-authoring-staging-deployment
+  description: example bff db
+spec:
+  type: mongo-database
+  owner: user:guest
+  system: canvas
