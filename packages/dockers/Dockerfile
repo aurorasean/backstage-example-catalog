@@ -1,6 +1,8 @@
 # Use the official .NET SDK image to build the application
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 
+FROM node:18 
+
 # Set the working directory
 WORKDIR /app
 

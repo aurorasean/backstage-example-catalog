@@ -46,7 +46,6 @@ spec:
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Resource
-type: deployment
 metadata:
   name: example-bff-authoring-staging-deployment
   description: example bff db
