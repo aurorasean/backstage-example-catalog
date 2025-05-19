@@ -1,4 +1,34 @@
 apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: bff-domain
+  description: BFF domain
+  annotations: 
+    assetid: top-level-domain
+    github-squad: icis-mars
+spec:
+  type: service
+  owner: user:aurorasean
+  lifecycle: experimental
+
+---
+
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: bff-system
+  description: BFF system
+  annotations: 
+    assetid: top-level-asset
+    github-squad: icis-mars
+spec:
+  type: service
+  owner: user:aurorasean
+  lifecycle: experimental
+  domain: canvas
+
+---
+apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: example-bff
