@@ -16,8 +16,8 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
-  name: bff-system
-  description: BFF system
+  name: canvas
+  description: canvas
   annotations: 
     assetid: top-level-asset
     github-squad: icis-mars
